@@ -1,0 +1,17 @@
+H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\VirusAttack.exe
+H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\VirusAttack.pdb
+H:\Курсач\VirusAttack\VirusAttack\VirusAttack\obj\x86\Debug\VirusAttack.csprojResolveAssemblyReference.cache
+H:\Курсач\VirusAttack\VirusAttack\VirusAttack\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+H:\Курсач\VirusAttack\VirusAttack\VirusAttack\obj\x86\Debug\VirusAttack.exe
+H:\Курсач\VirusAttack\VirusAttack\VirusAttack\obj\x86\Debug\VirusAttack.pdb
+H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\bullet.xnb
+H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\enemy.xnb
+H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\toolbar.xnb
+H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\tower.xnb
+H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\GUIFont.xnb
+H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\Levels\Level1\ground.png
+H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\Levels\Level1\levelMap.txt
+H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\Levels\Level1\road.png
+H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\Levels\Level1\WayPoints.txt
+H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\Levels\Level1\ground.xnb
+H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\Levels\Level1\road.xnb
