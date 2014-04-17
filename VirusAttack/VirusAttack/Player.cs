@@ -11,6 +11,14 @@ namespace VirusAttack
         public int Lives { get; private set; }
         private List<Tower> _towers=new List<Tower>();
 
+        private string _newTowerType;
+
+        public string NewTowerType
+        {
+            set { _newTowerType = value; }
+        }
+
+
         private MouseState _currentState;
         private MouseState _oldState;
 
@@ -37,7 +45,7 @@ namespace VirusAttack
             _cellY = (int) (_currentState.Y/Level.BlockSize);
             _tileX = _cellX*Level.BlockSize;
             _tileY = _cellY*Level.BlockSize;
-            if (_currentState.LeftButton == ButtonStatus.Released && _oldState.LeftButton == ButtonStatus.Pressed)
+            if (_currentState.LeftButton == ButtonState.Released && _oldState.LeftButton == ButtonState.Pressed)
             {
                 if (IsCellClear())
                 {
@@ -54,6 +62,30 @@ namespace VirusAttack
                 }
                 tower.Update(gameTime);
             }
+        }
+
+        public void AddTower()
+        {
+            Tower towerToAdd = null;
+
+            switch (_newTowerType)
+            {
+                case "FireTower":
+                {
+                    towerToAdd = new FireTower(_towerTexture,
+                        _bulletTexture, new Vector2(_tileX, _tileY));
+                    break;
+                }
+            }
+            if (IsCellClear() == true && towerToAdd.Cost <= Money)
+            {
+                _towers.Add(towerToAdd);
+                Money -= towerToAdd.Cost;
+
+                // Reset the newTowerType field.
+                _newTowerType = string.Empty;
+            }
+
         }
 
         private bool IsCellClear()

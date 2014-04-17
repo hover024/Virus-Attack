@@ -64,6 +64,33 @@
       <Output>H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\Levels\Level1\road.xnb</Output>
       <Time>2014-04-16T23:17:38.8828138+03:00</Time>
     </Item>
+    <Item>
+      <Source>Buttons\1\hover.png</Source>
+      <Name>Buttons\1\hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\Buttons\1\hover.xnb</Output>
+      <Time>2014-04-17T22:53:28.0557442+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Buttons\1\normal.png</Source>
+      <Name>Buttons\1\normal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\Buttons\1\normal.xnb</Output>
+      <Time>2014-04-17T22:53:28.0607445+03:00</Time>
+    </Item>
+    <Item>
+      <Source>Buttons\1\pressed.png</Source>
+      <Name>Buttons\1\pressed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\Buttons\1\pressed.xnb</Output>
+      <Time>2014-04-17T22:53:28.0657448+03:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{80D73957-EAB0-4627-853F-B53FCBA3F723}</ContentProjectGUID>

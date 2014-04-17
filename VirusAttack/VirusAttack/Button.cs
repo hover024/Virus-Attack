@@ -19,6 +19,8 @@ namespace VirusAttack
 
         private ButtonStatus _state = ButtonStatus.Normal;
 
+        public event EventHandler Clicked;
+
         public Button(Texture2D tex, Texture2D hoverTexture, Texture2D pressedTexture, Vector2 position)
             : base(tex, position)
         {
@@ -54,10 +56,14 @@ namespace VirusAttack
             if (mouseState.LeftButton == ButtonState.Released &&
                 _previousState.LeftButton == ButtonState.Pressed)
             {
-                if (isMouseOver == true)
+                if (isMouseOver)
                 {
                     // update the button state.
                     _state = ButtonStatus.Hover;
+                    if (Clicked != null)
+                    {
+                        Clicked(this, EventArgs.Empty);
+                    }
                 }
 
                 else if (_state == ButtonStatus.Pressed)
@@ -67,6 +73,22 @@ namespace VirusAttack
             }
 
             _previousState = mouseState;
+        }
+
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            switch (_state)
+            {
+                case ButtonStatus.Hover:
+                    spriteBatch.Draw(_hoverTexture,Position,Color.White);
+                    break;
+                case ButtonStatus.Normal:
+                    spriteBatch.Draw(Texture,Position,Color.White);
+                    break;
+                case ButtonStatus.Pressed:
+                    spriteBatch.Draw(_pressedTexture, Position, Color.White);
+                    break;
+            }
         }
     }
 }

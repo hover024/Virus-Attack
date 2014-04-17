@@ -22,6 +22,12 @@ namespace VirusAttack
         private WaveController _waveController;
         private Player player;
         private Toolbar toolbar;
+        private Button arrowButton;
+
+        private void arrowButton_Clicked(object Sender, EventArgs e)
+        {
+            player.NewTowerType = "FireTower";
+        }
 
         public Game1()
         {
@@ -33,7 +39,7 @@ namespace VirusAttack
             graphics.PreferredBackBufferWidth = Level.LevelWidth;
             graphics.PreferredBackBufferHeight = Level.LevelHeight + Level.BlockSize;
             IsMouseVisible = true;
-            graphics.IsFullScreen = true;
+            //graphics.IsFullScreen = true;
             graphics.ApplyChanges();
         }
 
@@ -50,6 +56,8 @@ namespace VirusAttack
             base.Initialize();
         }
 
+
+
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
         /// all of your content.
@@ -63,8 +71,13 @@ namespace VirusAttack
             toolbar = new Toolbar(Content.Load<Texture2D>("toolbar"), font,
                 new Vector2(0, Level.LevelHeight));
             player = new Player(_currentLevel, Content.Load<Texture2D>("tower"), Content.Load<Texture2D>("bullet"));
-            // TODO: use this.Content to load your game content here
+            arrowButton = new Button(Content.Load<Texture2D>("Buttons/1/normal"),
+                Content.Load<Texture2D>("Buttons/1/hover"), Content.Load<Texture2D>("Buttons/1/pressed"),
+                new Vector2(0, 0*Level.LevelHeight*32));
+            arrowButton.Clicked+=new EventHandler(arrowButton_Clicked);
         }
+
+
 
         protected Level LoadLevel(int levelNumber)
         {
@@ -94,13 +107,14 @@ namespace VirusAttack
         protected override void Update(GameTime gameTime)
         {
             // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonStatus.Pressed ||
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
                 Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
 
             player.Update(gameTime, _waveController.Enemies);
             _waveController.Update(gameTime);
+            arrowButton.Update(gameTime);
             //enemy.CurrentHealth-=0.05f;
 
             base.Update(gameTime);
@@ -118,6 +132,7 @@ namespace VirusAttack
             _waveController.Draw(_spriteBatch);
             player.Draw(_spriteBatch);
             toolbar.Draw(_spriteBatch, player);
+            arrowButton.Draw(_spriteBatch);
             _spriteBatch.End();
 
             // TODO: Add your drawing code here

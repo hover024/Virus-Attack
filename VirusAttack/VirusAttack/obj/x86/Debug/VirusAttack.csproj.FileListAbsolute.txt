@@ -15,3 +15,6 @@ H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\Levels
 H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\Levels\Level1\WayPoints.txt
 H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\Levels\Level1\ground.xnb
 H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\Levels\Level1\road.xnb
+H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\Buttons\1\hover.xnb
+H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\Buttons\1\normal.xnb
+H:\Курсач\VirusAttack\VirusAttack\VirusAttack\bin\x86\Debug\Content\Buttons\1\pressed.xnb
