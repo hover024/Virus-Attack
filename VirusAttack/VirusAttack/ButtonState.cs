@@ -5,7 +5,7 @@ using System.Text;
 
 namespace VirusAttack
 {
-    public enum ButtonState
+    public enum ButtonStatus
     {
         Normal,
         Hover,

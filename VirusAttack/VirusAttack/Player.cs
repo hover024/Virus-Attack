@@ -37,7 +37,7 @@ namespace VirusAttack
             _cellY = (int) (_currentState.Y/Level.BlockSize);
             _tileX = _cellX*Level.BlockSize;
             _tileY = _cellY*Level.BlockSize;
-            if (_currentState.LeftButton == ButtonState.Released && _oldState.LeftButton == ButtonState.Pressed)
+            if (_currentState.LeftButton == ButtonStatus.Released && _oldState.LeftButton == ButtonStatus.Pressed)
             {
                 if (IsCellClear())
                 {
